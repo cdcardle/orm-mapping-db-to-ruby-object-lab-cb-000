@@ -88,7 +88,7 @@ class Student
     ORDER BY grade ASC
     LIMIT ?
     SQL
-
+    binding.pry
     DB[:conn].execute(sql, x)
   end
 end
