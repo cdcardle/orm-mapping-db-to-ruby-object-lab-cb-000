@@ -27,7 +27,7 @@ class Student
     SELECT * FROM students WHERE students.name = ? LIMIT 1
     SQL
     # return a new instance of the Student class
-    self.new_from_db(DB[:conn].execute(sql))
+    self.new_from_db(DB[:conn].execute(sql, name))
   end
 
   def save
