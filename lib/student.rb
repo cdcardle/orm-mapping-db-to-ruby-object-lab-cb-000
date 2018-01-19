@@ -103,7 +103,7 @@ class Student
     LIMIT 1
     SQL
 
-    DB[:conn].execute(sql).flatten
+    DB[:conn].execute(sql).map {|row| self.new_from_dc(row)}.first
   end
 
   def self.all_students_in_grade_X(x)
