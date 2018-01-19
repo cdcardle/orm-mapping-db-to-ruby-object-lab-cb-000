@@ -85,7 +85,7 @@ class Student
     SELECT COUNT(*)
     FROM students
     WHERE grade = 10
-    ORDERY BY grade ASC
+    ORDER BY grade ASC
     LIMIT ?
     SQL
 
